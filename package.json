@@ -3,7 +3,7 @@
   "type": "module",
   "displayName": "Comment Banners",
   "description": "Insert ASCII banners for code comments",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "naela",
   "engines": {
     "vscode": "^1.100.0"
@@ -13,8 +13,8 @@
   ],
   "main": "./dist/extension.js",
   "activationEvents": [
-      "onCommand:comment-banners.insertBox"
-    ],
+    "onCommand:comment-banners.insertBox"
+  ],
   "contributes": {
     "commands": [
       {
