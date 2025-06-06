@@ -13,6 +13,9 @@
   ],
   "main": "./dist/extension.js",
   "contributes": {
+    "activationEvents": [
+      "onCommand:comment-banners.insertBox"
+    ],
     "commands": [
       {
         "command": "comment-banners.insertBox",
