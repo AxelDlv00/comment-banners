@@ -12,10 +12,10 @@
     "Other"
   ],
   "main": "./dist/extension.js",
-  "contributes": {
-    "activationEvents": [
+  "activationEvents": [
       "onCommand:comment-banners.insertBox"
     ],
+  "contributes": {
     "commands": [
       {
         "command": "comment-banners.insertBox",
