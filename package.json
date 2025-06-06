@@ -60,5 +60,9 @@
   },
   "dependencies": {
     "string-width": "^7.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AxelDlv00/comment-banners.git"
   }
 }
