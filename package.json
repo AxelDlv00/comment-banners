@@ -5,6 +5,7 @@
   "description": "Insert ASCII banners for code comments",
   "version": "0.0.4",
   "publisher": "naela",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.100.0"
   },
