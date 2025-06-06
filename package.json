@@ -2,8 +2,8 @@
   "name": "comment-banners",
   "displayName": "Comment Banners",
   "description": "Insert ASCII banners for code comments",
-  "version": "0.0.2",
-  "publisher": "naela", 
+  "version": "0.0.3",
+  "publisher": "naela",
   "engines": {
     "vscode": "^1.100.0"
   },
