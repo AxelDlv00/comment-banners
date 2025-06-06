@@ -1,19 +1,23 @@
 # Comment Banners
 
 [![GitHub](https://img.shields.io/badge/GitHub-Repo-blue?logo=github)](https://github.com/AxelDlv00/comment-banners)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/naela.comment-banners?label=VS%20Code%20Marketplace)](https://marketplace.visualstudio.com/items?itemName=naela.comment-banners)
 
 A VS Code extension to quickly insert stylish ASCII or markdown-style **comment banners** for code and documentation.
+
+If you want your code to look more organized and visually appealing, this extension is for you!
 
 ---
 
 ## Features
 
-- Insert centered banners with box-drawing characters (e.g. `╔═══╗`, `█▀▀█`)
-- Markdown-style banners (`###`, `===`, `---`)
-- Lightweight styles using slashes and hashes
+- Insert *centered* banners with box-drawing characters (e.g. `╔═══╗`, `###`, `===`, `---`, ...)
 - Language-aware comment prefixes (e.g. `//`, `#`, `%`)
-- Works on empty lines or replaces selected text
-- Quick style picker with live generation
+- It automatically detects the language of the file and uses the appropriate comment syntax (e.g. `//`, `#`, `%`)
+- If the selected text is too long, it will automatically wrap to the next line 
+- Quick shortcut to insert banners: `Ctrl + Alt + B` (Windows/Linux) or `Ctrl + Option + B` (macOS)
+- Multiple styles available: double line, rounded, single line, dashed, thick, classic, equals, arrow, unicode block, fidget
 
 ---
 
@@ -21,20 +25,107 @@ A VS Code extension to quickly insert stylish ASCII or markdown-style **comment 
 
 Here are just a few examples:
 
-### Unicode Box (Double-line)
+### Double Line
 
 ```ts
-// ╔══════════════════════╗
-// ║   Section Heading    ║
-// ╚══════════════════════╝
-````
+// ╔════════════════════════════════════════════════════════╗
+// ║                    SECTION HEADING                     ║
+// ╚════════════════════════════════════════════════════════╝
+```
 
-### Thick Block
+```ts
+// ╔════════════════════════════════════════════════════════╗
+// ║                    SECTION HEADING                     ║
+// ║ You can also add several lines of text inside the box. ║
+// ╚════════════════════════════════════════════════════════╝
+```
+
+```ts
+// ╔════════════════════════════════════════════════════════╗
+// ║                    SECTION HEADING                     ║
+// ║ You can also add several lines of text inside the box  ║
+// ║and if it is too long it will automatically wrap to the ║
+// ║                       next line.                       ║
+// ╚════════════════════════════════════════════════════════╝
+```
+
+### Rounded
 
 ```py
-# █▀▀▀▀▀▀▀▀▀▀▀█
-# █  WARNING  █
-# █▄▄▄▄▄▄▄▄▄▄▄█
+# ╭────────────────────────────────────────────────────────╮
+# │                    SECTION HEADING                     │
+# │ You can also add several lines of text inside the box. │
+# ╰────────────────────────────────────────────────────────╯
+```
+
+### Single Line
+
+```latex
+% /********************************************************\
+% *                    SECTION HEADING                     *
+% * You can also add several lines of text inside the box. *
+% \********************************************************/
+```
+
+### Dashed
+
+```ts
+// +--------------------------------------------------------+
+// |                    SECTION HEADING                     |
+// | You can also add several lines of text inside the box. |
+// +--------------------------------------------------------+
+```
+
+### Thick
+
+```ts
+// █▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
+// █                    SECTION HEADING                     █
+// █ You can also add several lines of text inside the box. █
+// █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
+```
+
+### Classic
+
+```ts
+// /--------------------------------------------------------\
+// |                    SECTION HEADING                     |
+// | You can also add several lines of text inside the box. |
+// \--------------------------------------------------------/
+```
+
+### Equals
+
+```ts
+// ==========================================================
+//                      SECTION HEADING                      
+//   You can also add several lines of text inside the box.  
+// ==========================================================
+```
+
+### Arrow
+
+```ts
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// >                    SECTION HEADING                     >
+// > You can also add several lines of text inside the box. >
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+```
+
+### Unicode block
+
+```ts
+// 🭽▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀🭾
+// ▌                    SECTION HEADING                     ▐
+// ▌ You can also add several lines of text inside the box. ▐
+// 🭼▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄🭿
+```
+
+### Fidget
+
+```ts
+// SECTION HEADING
+// You can also add several lines of text inside the box.
 ```
 
 ---
@@ -75,4 +166,4 @@ code --install-extension naela.latex-shortcuts
 
 ## Author
 
-Publisher: naela ([GitHub](https://github.com/AxelDlv00))
+Publisher: naela (a.k.a. [Axel Delaval](https://github.com/AxelDlv00))
