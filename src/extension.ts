@@ -16,8 +16,10 @@ export function activate(context: vscode.ExtensionContext) {
       // Choose style (extend as desired)
       const style = await vscode.window.showQuickPick(
         [
-          'Single-line', 'Double-line', 'Dashed', 'Thick', 'Classic',
-          'Rounded', 'Equals', 'Arrow', 'Unicode Block', 'Figlet'
+          'Rounded', 'Double-line', 
+          '🟨', '🟩', '🟪', '🟦', '🟥',
+          'Single-line', 'Dashed', 'Thick', 'Classic',
+          'Equals', 'Arrow', 'Unicode Block', 'Figlet'
         ],
         { placeHolder: 'Box style' }
       );
@@ -100,6 +102,31 @@ function buildBanner(text: string, style: string, prefix: string): string {
       top    = '='.repeat(width);
       mid    = pad(cleanText, width);
       bottom = '='.repeat(width);
+      break;
+    case '🟨':
+      top    = '🟨'.repeat(width);
+      mid    = pad(cleanText, width);
+      bottom = '🟨'.repeat(width);
+      break;
+    case '🟩':
+      top    = '🟩'.repeat(width);
+      mid    = pad(cleanText, width);
+      bottom = '🟩'.repeat(width);
+      break;
+    case '🟪':
+      top    = '🟪'.repeat(width);
+      mid    = pad(cleanText, width);
+      bottom = '🟪'.repeat(width);
+      break;
+    case '🟦':
+      top    = '🟦'.repeat(width);
+      mid    = pad(cleanText, width);
+      bottom = '🟦'.repeat(width);
+      break;
+    case '🟥':
+      top    = '🟥'.repeat(width);
+      mid    = pad(cleanText, width);
+      bottom = '🟥'.repeat(width);
       break;
     case 'Arrow':
       top    = '→' + '>'.repeat(width - 2) + '→';
